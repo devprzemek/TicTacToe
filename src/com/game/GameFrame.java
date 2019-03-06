@@ -7,16 +7,17 @@ public class GameFrame extends JFrame {
 
     public static int width = 700;
     public static int height = 500;
+    public JButton[] buttons;
 
 
     public GameFrame(){
 
+
         super("Tic-Tac-Toe Game");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        pack();
         setLocation(0,0);
         setSize(width, height);
 
+        buttons = new JButton[9];
 
         JPanel upPanel = new JPanel();
         upPanel.setSize(width,80);
@@ -26,16 +27,26 @@ public class GameFrame extends JFrame {
 
 
         JPanel downPanel = new JPanel();
-        downPanel.setBackground(Color.WHITE);
-        downPanel.setSize(width,420);
+        downPanel.setSize(width,380);
         downPanel.setLocation(0, 80);
+        downPanel.setBackground(Color.WHITE);
         add(downPanel);
 
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.setSize(width,300);
+        bottomPanel.setLocation(0, 80);
+        bottomPanel.setBackground(Color.GRAY);
+        add(bottomPanel);
 
 
-            JButton button = new JButton("OK");
-            downPanel.add(button);
-            setVisible(true);
+        downPanel.setLayout(new GridLayout(3,3));
+        for (int i = 0; i < 9; i++){
+            buttons[i] = new JButton("----");
+            downPanel.add(buttons[i]);
+        }
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
 
 
 
