@@ -25,7 +25,6 @@ public class GameFrame extends JFrame {
         upPanel.setBackground(Color.GREEN);
         add(upPanel);
 
-
         JPanel downPanel = new JPanel();
         downPanel.setSize(width,380);
         downPanel.setLocation(0, 80);
@@ -38,7 +37,6 @@ public class GameFrame extends JFrame {
         bottomPanel.setBackground(Color.GRAY);
         add(bottomPanel);
 
-
         downPanel.setLayout(new GridLayout(3,3));
         for (int i = 0; i < 9; i++){
             buttons[i] = new JButton("----");
@@ -47,11 +45,6 @@ public class GameFrame extends JFrame {
 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-
-
-
-
-
 
     }
 
