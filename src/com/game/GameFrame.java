@@ -12,6 +12,7 @@ public class GameFrame extends JFrame implements ActionListener {
     public JButton[] buttons;
 
     private JPanel upPanel;
+    private JTextField textWindow;
     private JPanel downPanel;
 
     private GameFrame frame;
@@ -30,9 +31,11 @@ public class GameFrame extends JFrame implements ActionListener {
         upPanel = new JPanel();
         upPanel.setSize(width,80);
         upPanel.setLocation(0, 0);
-        upPanel.setBackground(Color.GREEN);
+        upPanel.setBackground(Color.ORANGE);
 
-        JTextField textWindow = new JTextField("Grę rozpoczyna kółko O!");
+        textWindow = new JTextField("GRĘ ROZPOCZYNA GRACZ O!");
+        textWindow.setFont(new Font("TimesRoman", Font.BOLD, 25));
+        textWindow.setForeground(Color.red);
         upPanel.add(textWindow);
         add(upPanel);
 
@@ -67,38 +70,47 @@ public class GameFrame extends JFrame implements ActionListener {
         if(source == buttons[0]) {
             buttons[0].setText(countShapeNumber());
             downPanel.repaint();
+            textWindow.setText(generatMessage());
         }
         if(source == buttons[1]) {
             buttons[1].setText(countShapeNumber());
             downPanel.repaint();
+            textWindow.setText(generatMessage());
         }
         if(source == buttons[2]) {
             buttons[2].setText(countShapeNumber());
             downPanel.repaint();
+            textWindow.setText(generatMessage());
         }
         if(source == buttons[3]) {
             buttons[3].setText(countShapeNumber());
             downPanel.repaint();
+            textWindow.setText(generatMessage());
         }
         if(source == buttons[4]) {
             buttons[4].setText(countShapeNumber());
             downPanel.repaint();
+            textWindow.setText(generatMessage());
         }
         if(source == buttons[5]) {
             buttons[5].setText(countShapeNumber());
             downPanel.repaint();
+            textWindow.setText(generatMessage());
         }
         if(source == buttons[6]) {
             buttons[6].setText(countShapeNumber());
             downPanel.repaint();
+            textWindow.setText(generatMessage());
         }
         if(source == buttons[7]) {
             buttons[7].setText(countShapeNumber());
             downPanel.repaint();
+            textWindow.setText(generatMessage());
         }
         if(source == buttons[8]) {
             buttons[8].setText(countShapeNumber());
             downPanel.repaint();
+            textWindow.setText(generatMessage());
         }
     }
 
@@ -113,6 +125,11 @@ public class GameFrame extends JFrame implements ActionListener {
         }
     }
 
+    public String generatMessage(){
+        if (shapeNumber % 2 == 1) return "KOLEJ GRACZA  X ";
+
+        else return "KOLEJ GRACZA  O ";
+    }
 
 
 }

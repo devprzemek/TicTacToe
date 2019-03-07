@@ -17,8 +17,7 @@ public class Game {
         public void run() {
             new Game();
         }
-
-    });
+        });
     }
 }
 
