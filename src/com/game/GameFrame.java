@@ -16,6 +16,8 @@ public class GameFrame extends JFrame implements ActionListener {
 
     private GameFrame frame;
 
+    private int shapeNumber = 0; // określa jaki znak ma być rysowany X lub O
+
     public GameFrame(){
 
 
@@ -29,6 +31,9 @@ public class GameFrame extends JFrame implements ActionListener {
         upPanel.setSize(width,80);
         upPanel.setLocation(0, 0);
         upPanel.setBackground(Color.GREEN);
+
+        JTextField textWindow = new JTextField("Grę rozpoczyna kółko O!");
+        upPanel.add(textWindow);
         add(upPanel);
 
         downPanel = new JPanel();
@@ -60,41 +65,54 @@ public class GameFrame extends JFrame implements ActionListener {
 
         Object source = a.getSource();
         if(source == buttons[0]) {
-            buttons[0].setText("X");
+            buttons[0].setText(countShapeNumber());
             downPanel.repaint();
         }
         if(source == buttons[1]) {
-            buttons[1].setText("X");
+            buttons[1].setText(countShapeNumber());
             downPanel.repaint();
         }
         if(source == buttons[2]) {
-            buttons[2].setText("X");
+            buttons[2].setText(countShapeNumber());
             downPanel.repaint();
         }
         if(source == buttons[3]) {
-            buttons[3].setText("X");
+            buttons[3].setText(countShapeNumber());
             downPanel.repaint();
         }
         if(source == buttons[4]) {
-            buttons[4].setText("X");
+            buttons[4].setText(countShapeNumber());
             downPanel.repaint();
         }
         if(source == buttons[5]) {
-            buttons[5].setText("X");
+            buttons[5].setText(countShapeNumber());
             downPanel.repaint();
         }
         if(source == buttons[6]) {
-            buttons[6].setText("X");
+            buttons[6].setText(countShapeNumber());
             downPanel.repaint();
         }
         if(source == buttons[7]) {
-            buttons[7].setText("X");
+            buttons[7].setText(countShapeNumber());
             downPanel.repaint();
         }
         if(source == buttons[8]) {
-            buttons[8].setText("X");
+            buttons[8].setText(countShapeNumber());
             downPanel.repaint();
         }
     }
+
+    public String countShapeNumber(){
+        if (shapeNumber % 2 == 1) {
+            shapeNumber++;
+            return "X";
+        }
+        else {
+            shapeNumber ++;
+            return "O";
+        }
+    }
+
+
 
 }
