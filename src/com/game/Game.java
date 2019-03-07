@@ -6,18 +6,20 @@ import java.awt.*;
 
 public class Game {
 
-    private JFrame frame;
-
     public Game(){
-        frame = new GameFrame();
+        JFrame frame = new GameFrame();
     }
 
     public static void main(String[] args) {
 
-        Game game = new Game();
-
-
+        EventQueue.invokeLater(new Runnable() {
+        @Override
+        public void run() {
+            new Game();
         }
 
+    });
     }
+}
+
 
