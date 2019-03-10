@@ -70,47 +70,112 @@ public class GameFrame extends JFrame implements ActionListener {
         if(source == buttons[0]) {
             buttons[0].setText(countShapeNumber());
             downPanel.repaint();
-            textWindow.setText(generatMessage());
+
+            getGameResult();
+
+            if (!getGameResult()){
+                textWindow.setText(generatMessage());
+            }
+            if (getGameResult() == false && shapeNumber == 9)
+                textWindow.setText("REMIS!");
+
         }
         if(source == buttons[1]) {
             buttons[1].setText(countShapeNumber());
             downPanel.repaint();
-            textWindow.setText(generatMessage());
+
+            getGameResult();
+
+            if (!getGameResult()){
+                textWindow.setText(generatMessage());
+            }
+            if (getGameResult() == false && shapeNumber == 9)
+                textWindow.setText("REMIS!");
         }
         if(source == buttons[2]) {
             buttons[2].setText(countShapeNumber());
             downPanel.repaint();
-            textWindow.setText(generatMessage());
+
+            getGameResult();
+
+            if (!getGameResult()){
+                textWindow.setText(generatMessage());
+            }
+            if (getGameResult() == false && shapeNumber == 9)
+                textWindow.setText("REMIS!");
         }
         if(source == buttons[3]) {
             buttons[3].setText(countShapeNumber());
             downPanel.repaint();
-            textWindow.setText(generatMessage());
+
+            getGameResult();
+
+            if (!getGameResult()){
+                textWindow.setText(generatMessage());
+            }
+            if (getGameResult() == false && shapeNumber == 9)
+                textWindow.setText("REMIS!");
         }
         if(source == buttons[4]) {
             buttons[4].setText(countShapeNumber());
             downPanel.repaint();
-            textWindow.setText(generatMessage());
+
+            getGameResult();
+
+            if (!getGameResult()){
+                textWindow.setText(generatMessage());
+            }
+            if (getGameResult() == false && shapeNumber == 9)
+                textWindow.setText("REMIS!");
         }
         if(source == buttons[5]) {
             buttons[5].setText(countShapeNumber());
             downPanel.repaint();
-            textWindow.setText(generatMessage());
+
+            getGameResult();
+
+            if (!getGameResult()){
+                textWindow.setText(generatMessage());
+            }
+            if (getGameResult() == false && shapeNumber == 9)
+                textWindow.setText("REMIS!");
         }
         if(source == buttons[6]) {
             buttons[6].setText(countShapeNumber());
             downPanel.repaint();
-            textWindow.setText(generatMessage());
+
+            getGameResult();
+
+            if (!getGameResult()){
+                textWindow.setText(generatMessage());
+            }
+            if (getGameResult() == false && shapeNumber == 9)
+                textWindow.setText("REMIS!");
         }
         if(source == buttons[7]) {
             buttons[7].setText(countShapeNumber());
             downPanel.repaint();
-            textWindow.setText(generatMessage());
+
+            getGameResult();
+
+            if (!getGameResult()){
+                textWindow.setText(generatMessage());
+            }
+            if (getGameResult() == false && shapeNumber == 9)
+                textWindow.setText("REMIS!");
         }
         if(source == buttons[8]) {
             buttons[8].setText(countShapeNumber());
             downPanel.repaint();
-            textWindow.setText(generatMessage());
+
+            getGameResult();
+
+            if (!getGameResult()){
+                textWindow.setText(generatMessage());
+            }
+            if (getGameResult() == false && shapeNumber == 9)
+                textWindow.setText("REMIS!");
+
         }
     }
 
@@ -130,6 +195,80 @@ public class GameFrame extends JFrame implements ActionListener {
 
         else return "KOLEJ GRACZA  O ";
     }
+
+    public boolean getGameResult(){
+        if (buttons[0].getText() == "O" && buttons[1].getText() == "O" && buttons[2].getText() == "O"){
+            textWindow.setText("Brawo! Wygrał gracz O!");
+            return true;
+        }
+        if (buttons[3].getText() == "O" && buttons[4].getText() == "O" && buttons[5].getText() == "O"){
+            textWindow.setText("Brawo! Wygrał gracz O!");
+            return true;
+        }
+        if (buttons[6].getText() == "O" && buttons[7].getText() == "O" && buttons[8].getText() == "O"){
+            textWindow.setText("Brawo! Wygrał gracz O!");
+            return true;
+        }
+        if (buttons[0].getText() == "O" && buttons[3].getText() == "O" && buttons[6].getText() == "O"){
+            textWindow.setText("Brawo! Wygrał gracz O!");
+            return true;
+        }
+        if (buttons[1].getText() == "O" && buttons[4].getText() == "O" && buttons[7].getText() == "O"){
+            textWindow.setText("Brawo! Wygrał gracz O!");
+            return true;
+        }
+        if (buttons[2].getText() == "O" && buttons[5].getText() == "O" && buttons[8].getText() == "O"){
+            textWindow.setText("Brawo! Wygrał gracz O!");
+            return true;
+        }
+        if (buttons[0].getText() == "O" && buttons[4].getText() == "O" && buttons[8].getText() == "O"){
+            textWindow.setText("Brawo! Wygrał gracz O!");
+            return true;
+        }
+        if (buttons[2].getText() == "O" && buttons[4].getText() == "O" && buttons[6].getText() == "O"){
+            textWindow.setText("Brawo! Wygrał gracz O!");
+            return true;
+        }
+        // określenie dla X
+
+        if (buttons[0].getText() == "X" && buttons[1].getText() == "X" && buttons[2].getText() == "X"){
+            textWindow.setText("Brawo! Wygrał gracz X!");
+            return true;
+        }
+        if (buttons[3].getText() == "X" && buttons[4].getText() == "X" && buttons[5].getText() == "X"){
+            textWindow.setText("Brawo! Wygrał gracz X!");
+            return true;
+        }
+        if (buttons[6].getText() == "X" && buttons[7].getText() == "X" && buttons[8].getText() == "X"){
+            textWindow.setText("Brawo! Wygrał gracz X!");
+            return true;
+        }
+        if (buttons[0].getText() == "X" && buttons[3].getText() == "X" && buttons[6].getText() == "X"){
+            textWindow.setText("Brawo! Wygrał gracz X!");
+            return true;
+        }
+        if (buttons[1].getText() == "X" && buttons[4].getText() == "X" && buttons[7].getText() == "X"){
+            textWindow.setText("Brawo! Wygrał gracz X!");
+            return true;
+        }
+        if (buttons[2].getText() == "X" && buttons[5].getText() == "X" && buttons[8].getText() == "X"){
+            textWindow.setText("Brawo! Wygrał gracz X!");
+            return true;
+        }
+        if (buttons[0].getText() == "X" && buttons[4].getText() == "X" && buttons[8].getText() == "X"){
+            textWindow.setText("Brawo! Wygrał gracz X!");
+            return true;
+        }
+        if (buttons[2].getText() == "X" && buttons[4].getText() == "X" && buttons[6].getText() == "X"){
+            textWindow.setText("Brawo! Wygrał gracz X!");
+            return true;
+        }
+        else
+            return false;
+
+    }
+
+
 
 
 }
