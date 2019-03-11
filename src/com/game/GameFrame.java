@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class GameFrame extends JFrame implements ActionListener {
 
     public static final int width = 700;
@@ -67,7 +68,10 @@ public class GameFrame extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent a){
 
         Object source = a.getSource();
+
         if(source == buttons[0]) {
+            Sound.playSound();
+
             buttons[0].setText(countShapeNumber());
             downPanel.repaint();
 
@@ -81,6 +85,8 @@ public class GameFrame extends JFrame implements ActionListener {
 
         }
         if(source == buttons[1]) {
+            Sound.playSound();
+
             buttons[1].setText(countShapeNumber());
             downPanel.repaint();
 
@@ -93,6 +99,7 @@ public class GameFrame extends JFrame implements ActionListener {
                 textWindow.setText("REMIS!");
         }
         if(source == buttons[2]) {
+            Sound.playSound();
             buttons[2].setText(countShapeNumber());
             downPanel.repaint();
 
@@ -105,6 +112,7 @@ public class GameFrame extends JFrame implements ActionListener {
                 textWindow.setText("REMIS!");
         }
         if(source == buttons[3]) {
+            Sound.playSound();
             buttons[3].setText(countShapeNumber());
             downPanel.repaint();
 
@@ -117,6 +125,8 @@ public class GameFrame extends JFrame implements ActionListener {
                 textWindow.setText("REMIS!");
         }
         if(source == buttons[4]) {
+            Sound.playSound();
+
             buttons[4].setText(countShapeNumber());
             downPanel.repaint();
 
@@ -129,6 +139,8 @@ public class GameFrame extends JFrame implements ActionListener {
                 textWindow.setText("REMIS!");
         }
         if(source == buttons[5]) {
+            Sound.playSound();
+
             buttons[5].setText(countShapeNumber());
             downPanel.repaint();
 
@@ -141,6 +153,8 @@ public class GameFrame extends JFrame implements ActionListener {
                 textWindow.setText("REMIS!");
         }
         if(source == buttons[6]) {
+            Sound.playSound();
+
             buttons[6].setText(countShapeNumber());
             downPanel.repaint();
 
@@ -153,6 +167,8 @@ public class GameFrame extends JFrame implements ActionListener {
                 textWindow.setText("REMIS!");
         }
         if(source == buttons[7]) {
+            Sound.playSound();
+
             buttons[7].setText(countShapeNumber());
             downPanel.repaint();
 
@@ -165,6 +181,8 @@ public class GameFrame extends JFrame implements ActionListener {
                 textWindow.setText("REMIS!");
         }
         if(source == buttons[8]) {
+            Sound.playSound();
+
             buttons[8].setText(countShapeNumber());
             downPanel.repaint();
 
@@ -175,7 +193,6 @@ public class GameFrame extends JFrame implements ActionListener {
             }
             if (getGameResult() == false && shapeNumber == 9)
                 textWindow.setText("REMIS!");
-
         }
     }
 
@@ -265,10 +282,6 @@ public class GameFrame extends JFrame implements ActionListener {
         }
         else
             return false;
-
     }
-
-
-
 
 }
